@@ -61,13 +61,13 @@ function Home() {
         </select>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 ">
         {filtered.map((p) => (
           <div
   key={p.id}
   className="border p-3 flex flex-col justify-between h-full"
 >
-  <div>
+  <div >
     <img src={p.image} className="h-32 mx-auto" />
     <h2 className="text-sm mt-2">{p.title}</h2>
     <p>₹ {p.price}</p>
