@@ -4,9 +4,13 @@ import { CartContext } from "../context/CartContext";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const  { cart } = useContext(CartContext);
+const context = useContext(CartContext);
 
-  return (
+if (!context) {
+  throw new Error("CartContext not found");
+}
+
+const { cart } = context;  return (
     <nav className="bg-black text-white px-6 py-4 shadow-md">
       <div className="flex justify-between items-center">
         <h1 className="text-xl font-bold cursor-pointer">Online Store</h1>
